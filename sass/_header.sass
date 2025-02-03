@@ -1,0 +1,47 @@
+.header
+    grid-column: content-start / content-end
+    display: grid
+    grid-template-columns: 37.2rem 1fr 74rem
+    grid-template-rows: 7.5rem 4.4rem
+    align-content: start
+    grid-gap: 2.2rem 0
+    padding: 2.4rem 0
+    justify-content: space-around
+    //background-color: #88FF88
+    &__btn
+        grid-column: 3 / 4
+        justify-self: end
+.logo
+    grid-column: 1 / 2
+.contact
+    grid-column: 3 / 4
+    justify-self: right
+    display: flex
+    &__text
+        padding-right: 1.2rem
+        border-right: 1px solid #A78BFA
+        &__paragraph
+            //styleName: base/regular;
+            font-family: Formular
+            font-size: 1.6rem
+            font-weight: bold
+            line-height: 2.4rem
+            text-align: right
+    &__phone
+        padding-left: 1.2rem
+        &__number
+            //styleName: 4xl/black;
+            font-family: Formular
+            font-size: 3.7rem
+            font-weight: bold
+            line-height: 4.0rem
+            text-align: left
+            color: #111827
+        &__label
+            //styleName: 2xl/light;
+            font-family: Formular
+            font-size: 2.4rem
+            font-weight: 300
+            line-height: 3.2rem
+            text-align: left
+

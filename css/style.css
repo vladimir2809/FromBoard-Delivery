@@ -1,0 +1,141 @@
+@font-face {
+  font-family: Formular;
+  src: url("../fonts/Formular/Formular-Light.ttf");
+  font-weight: light;
+}
+@font-face {
+  font-family: Formular;
+  src: url("../fonts/Formular/Formular-Bold.ttf");
+  font-weight: bold;
+}
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: white;
+  font-family: Formular;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [content-start] repeat(12, 12.8rem) [content-end] 1fr [full-end];
+  grid-template-rows: 20rem;
+}
+
+.button-1 {
+  width: 20rem;
+  height: 4.4rem;
+  background-color: #8B5CF6;
+  color: white;
+  border: 1px solid #8B5CF6;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo__img {
+  width: 5rem;
+  height: 7.4rem;
+}
+.logo__text {
+  font-family: Formular;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 3.2rem;
+  text-align: left;
+  color: #111827;
+}
+
+.nav {
+  grid-column: 1/2;
+  align-self: center;
+}
+.nav__list {
+  list-style-type: none;
+}
+.nav__item {
+  display: inline;
+}
+.nav__item:not(:last-child) {
+  margin-right: 2.4rem;
+}
+.nav__link {
+  text-decoration: none;
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-align: left;
+  color: #111827;
+}
+.nav__link:hover {
+  color: #8B5CF6;
+}
+
+.header {
+  grid-column: content-start/content-end;
+  display: grid;
+  grid-template-columns: 37.2rem 1fr 74rem;
+  grid-template-rows: 7.5rem 4.4rem;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  grid-gap: 2.2rem 0;
+  padding: 2.4rem 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.header__btn {
+  grid-column: 3/4;
+  justify-self: end;
+}
+
+.logo {
+  grid-column: 1/2;
+}
+
+.contact {
+  grid-column: 3/4;
+  justify-self: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact__text {
+  padding-right: 1.2rem;
+  border-right: 1px solid #A78BFA;
+}
+.contact__text__paragraph {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  text-align: right;
+}
+.contact__phone {
+  padding-left: 1.2rem;
+}
+.contact__phone__number {
+  font-family: Formular;
+  font-size: 3.7rem;
+  font-weight: bold;
+  line-height: 4rem;
+  text-align: left;
+  color: #111827;
+}
+.contact__phone__label {
+  font-family: Formular;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 3.2rem;
+  text-align: left;
+}
