@@ -24,7 +24,14 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, 12.8rem) [content-end] 1fr [full-end];
-  grid-template-rows: 20rem;
+  grid-template-rows: 20rem 70rem;
+}
+
+.div-background {
+  grid-column: full-start/full-end;
+  grid-row: 2/-2;
+  background-color: #E5E7EB;
+  z-index: -1;
 }
 
 .button-1 {
@@ -33,6 +40,14 @@ html {
   background-color: #8B5CF6;
   color: white;
   border: 1px solid #8B5CF6;
+}
+.button-1:hover {
+  background-color: #A78BFA;
+  border: 1px solid #A78BFA;
+}
+.button-1:active {
+  background-color: #6D28D9;
+  border: 1px solid #6D28D9;
 }
 
 .logo {
@@ -85,7 +100,7 @@ html {
 .header {
   grid-column: content-start/content-end;
   display: grid;
-  grid-template-columns: 37.2rem 1fr 74rem;
+  grid-template-columns: 38.2rem 1fr 74rem;
   grid-template-rows: 7.5rem 4.4rem;
   -ms-flex-line-pack: start;
       align-content: start;
@@ -138,4 +153,129 @@ html {
   font-weight: 300;
   line-height: 3.2rem;
   text-align: left;
+}
+
+.delivery {
+  grid-column: content-start/8;
+  grid-row: 2/3;
+  margin-top: 7.2rem;
+}
+.delivery__title-1 {
+  font-family: Formular;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 4rem;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+.delivery__paragraph {
+  font-family: Formular;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  text-align: left;
+  margin-bottom: 1.6rem;
+}
+
+.calc {
+  grid-column: 8/content-end;
+  grid-row: 2/3;
+  display: grid;
+  background-color: white;
+  margin-top: 7.2rem;
+  margin-bottom: 4rem;
+  border-radius: 2rem;
+  justify-items: center;
+  padding: 2.4rem 0;
+}
+.calc__title-2 {
+  font-family: Formular;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  text-align: center;
+  width: 35.8rem;
+}
+.calc__paragraph {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: center;
+  margin-bottom: 2.7rem;
+  width: 35.8rem;
+}
+.calc__form {
+  display: grid;
+  grid-template-columns: repeat(2, 23.5rem);
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  grid-gap: 2.4rem 2rem;
+  width: 49.5rem;
+}
+.calc__input {
+  justify-self: center;
+  width: 23.6rem;
+  height: 4.8rem;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.calc__input:first-child {
+  width: 49.1rem;
+  grid-column: 1/-1;
+}
+.calc__input::-webkit-input-placeholder {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: left;
+  padding-left: 0.4rem;
+}
+.calc__input::-moz-placeholder {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: left;
+  padding-left: 0.4rem;
+}
+.calc__input:-ms-input-placeholder {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: left;
+  padding-left: 0.4rem;
+}
+.calc__input::-ms-input-placeholder {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: left;
+  padding-left: 0.4rem;
+}
+.calc__input::placeholder {
+  font-family: Formular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: left;
+  padding-left: 0.4rem;
+}
+.calc__button {
+  width: 49.1rem;
+  height: 4.6rem;
+  grid-column: 1/-1;
+  background-color: #8B5CF6;
+  border: 1px solid #8B5CF6;
+  border-radius: 0.3rem;
+  color: white;
+}
+
+.calc__form input:focus {
+  border: 1px solid #8B5CF6;
+  outline: 3px solid #8B5CF6;
 }
