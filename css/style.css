@@ -23,13 +23,13 @@ html {
 
 .container {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] repeat(12, 12.8rem) [content-end] 1fr [full-end];
-  grid-template-rows: 20rem 70rem;
+  grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(8%, 12.8rem)) [content-end] 1fr [full-end];
+  grid-template-rows: 20rem 70rem 7rem 40rem;
 }
 
 .div-background {
   grid-column: full-start/full-end;
-  grid-row: 2/-2;
+  grid-row: 2/-1;
   background-color: #E5E7EB;
   z-index: -1;
 }
@@ -129,7 +129,7 @@ html {
   padding-right: 1.2rem;
   border-right: 1px solid #A78BFA;
 }
-.contact__text__paragraph {
+.contact__text-paragraph {
   font-family: Formular;
   font-size: 1.6rem;
   font-weight: bold;
@@ -139,7 +139,7 @@ html {
 .contact__phone {
   padding-left: 1.2rem;
 }
-.contact__phone__number {
+.contact__phone-number {
   font-family: Formular;
   font-size: 3.7rem;
   font-weight: bold;
@@ -147,7 +147,7 @@ html {
   text-align: left;
   color: #111827;
 }
-.contact__phone__label {
+.contact__phone-label {
   font-family: Formular;
   font-size: 2.4rem;
   font-weight: 300;
@@ -278,4 +278,58 @@ html {
 .calc__form input:focus {
   border: 1px solid #8B5CF6;
   outline: 3px solid #8B5CF6;
+}
+
+.advantages {
+  grid-column: content-start/content-end;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-template-rows: minax(repeat(auto-fit, 15rem), -webkit-max-content);
+  grid-template-rows: minax(repeat(auto-fit, 15rem), max-content);
+  justify-items: center;
+  grid-gap: 2.4rem;
+}
+.advantages__title-2 {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: start;
+  font-family: Formular;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  letter-spacing: 0%;
+}
+
+.advantages-item {
+  display: grid;
+  grid-template-columns: 14rem 30rem;
+  grid-template-rows: minmax(-webkit-max-content, 14rem);
+  grid-template-rows: minmax(max-content, 14rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.advantages-item__img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.advantages-item__text {
+  grid-column: 2/3;
+}
+.advantages-item__title-4 {
+  font-family: Formular;
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  letter-spacing: 0%;
+  margin-bottom: 1.2rem;
+}
+.advantages-item__paragraph {
+  font-family: Formular;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0%;
 }

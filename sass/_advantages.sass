@@ -1,0 +1,42 @@
+.advantages
+    grid-column: content-start / content-end
+    grid-row: 4 / 5
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr))
+    grid-template-rows: minax(repeat(auto-fit, 15rem),max-content)
+    justify-items: center
+    grid-gap: 2.4rem
+    &__title-2
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+        justify-self: center
+        align-self: start
+        font-family: Formular
+        font-weight: 900
+        font-size: 3rem
+        line-height: 3.6rem
+        letter-spacing: 0%
+.advantages-item
+    display: grid
+    grid-template-columns: 14rem 30rem
+    grid-template-rows: minmax(max-content, 14rem)
+    align-items: center
+    &__img
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+    &__text
+        grid-column: 2 / 3
+    &__title-4
+        font-family: Formular
+        font-weight: 900
+        font-size: 2.4rem
+        line-height: 3.2rem
+        letter-spacing: 0%
+        margin-bottom: 1.2rem
+    &__paragraph
+        font-family: Formular
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 2rem
+        letter-spacing: 0%
+

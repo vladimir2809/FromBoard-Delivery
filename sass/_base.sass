@@ -8,10 +8,10 @@ html
     font-family: Formular
 .container
     display: grid
-    grid-template-columns: [full-start] 1fr [content-start] repeat(12, 12.8rem) [content-end] 1fr [full-end]
-    grid-template-rows: 20rem 70rem
+    grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(8%, 12.8rem)) [content-end] 1fr [full-end]
+    grid-template-rows: 20rem 70rem 7rem 40rem
 .div-background
     grid-column: full-start / full-end
-    grid-row: 2 / -2
+    grid-row: 2 / -1
     background-color: #E5E7EB
     z-index: -1
