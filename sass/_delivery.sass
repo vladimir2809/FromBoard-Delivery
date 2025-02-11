@@ -1,9 +1,15 @@
 .delivery
     grid-column: content-start / 8
     grid-row: 2 / 3
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: 8rem 8.3rem 1fr
     margin-top: 7.2rem
+    margin-bottom: 4rem 
     &__title-1
         //styleName: 4xl/black;
+        grid-column: 1 / 2
+        grid-row: 1 / 2
         font-family: Formular
         font-size: 3.8rem
         font-weight: 900
@@ -13,9 +19,16 @@
         margin-bottom: 1.2rem
     &__paragraph
         //styleName: xl/regular;
+        grid-column: 1 / 2
+        grid-row: 2 / 3
         font-family: Formular
         font-size: 2.2rem
         font-weight: 400
         line-height: 2.8rem
         text-align: left
         margin-bottom: 1.6rem
+    &__image
+        grid-column: 1 / 2
+        grid-row: 3 / 4
+        width: 100%
+        height: 100%
