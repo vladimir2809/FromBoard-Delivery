@@ -1,3 +1,15 @@
+.margin-top-delivery {
+  margin-top: 7rem;
+}
+
+.margin-top-calc {
+  margin-top: 7rem;
+}
+
+.margin-top-7rem {
+  margin-top: 7.2rem;
+}
+
 @font-face {
   font-family: Formular;
   src: url("../fonts/Formular/Formular-Light.ttf");
@@ -23,7 +35,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(7%, 12.8rem)) [content-end] 1fr [full-end];
+  grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(8%, 12.8rem)) [content-end] 1fr [full-end];
   grid-template-rows: 20rem 70rem 7rem minmax(40rem, -webkit-max-content) 7.2rem 67.1rem;
   grid-template-rows: 20rem 70rem 7rem minmax(40rem, max-content) 7.2rem 67.1rem;
 }
@@ -41,6 +53,7 @@ html {
   background-color: #8B5CF6;
   color: white;
   border: 1px solid #8B5CF6;
+  border-radius: 1.2rem;
 }
 .button-1:hover {
   background-color: #A78BFA;
@@ -162,8 +175,6 @@ html {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 8rem 8.3rem 1fr;
-  margin-top: 7.2rem;
-  margin-bottom: 4rem;
 }
 .delivery__title-1 {
   grid-column: 1/2;
@@ -198,8 +209,6 @@ html {
   grid-row: 2/3;
   display: grid;
   background-color: white;
-  margin-top: 7.2rem;
-  margin-bottom: 4rem;
   margin-left: 2.4rem;
   border-radius: 2rem;
   justify-items: center;
@@ -302,8 +311,8 @@ html {
   grid-row: 4/5;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-  grid-template-rows: minax(repeat(auto-fit, 15rem), -webkit-max-content);
-  grid-template-rows: minax(repeat(auto-fit, 15rem), max-content);
+  grid-template-rows: minmax(repeat(auto-fit, 15rem), -webkit-max-content);
+  grid-template-rows: minmax(repeat(auto-fit, 15rem), max-content);
   justify-items: center;
   grid-gap: 2.4rem;
 }
@@ -355,10 +364,10 @@ html {
   grid-column: content-start/content-end;
   grid-row: 6/7;
   display: grid;
-  justify-items: center;
 }
 .guarantees__title-2 {
   width: 30.4rem;
+  justify-self: center;
   font-family: Formular;
   font-weight: 900;
   font-size: 3rem;
@@ -367,6 +376,7 @@ html {
 }
 .guarantees__paragraph {
   width: 75.6rem;
+  justify-self: center;
   font-family: Formular;
   font-weight: 400;
   font-size: 1.6rem;
@@ -374,7 +384,26 @@ html {
   letter-spacing: 0%;
   text-align: center;
 }
+.guarantees__button {
+  grid-column: 1/2;
+  justify-self: center;
+  margin-top: 3.5rem;
+}
 
+.guarantees-container {
+  display: grid;
+  grid-template-columns: repeat(4, 37rem);
+  grid-template-rows: 41rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 0 2.4rem;
+}
+
+.guarantees-item {
+  width: 36.2rem;
+  height: 40.7rem;
+}
 .guarantees-item__label {
   font-family: Formular;
   font-weight: 900;

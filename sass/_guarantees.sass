@@ -2,9 +2,10 @@
     grid-column: content-start / content-end
     grid-row: 6 / 7
     display: grid
-    justify-items: center
+    //justify-items: center
     &__title-2
         width: 30.4rem
+        justify-self: center
         //text-align: center
         font-family: Formular
         font-weight: 900
@@ -13,13 +14,26 @@
         letter-spacing: 0%
     &__paragraph
         width: 75.6rem
+        justify-self: center
         font-family: Formular
         font-weight: 400
         font-size: 1.6rem
         line-height: 2.4rem
         letter-spacing: 0%
         text-align: center
+    &__button
+        grid-column: 1 / 2
+        justify-self: center
+        margin-top: 3.5rem
+.guarantees-container
+    display: grid
+    grid-template-columns: repeat(4, 37rem)
+    grid-template-rows: 41rem
+    justify-content: center
+    grid-gap: 0 2.4rem
 .guarantees-item
+    width: 36.2rem
+    height: 40.7rem
     &__label
         font-family: Formular
         font-weight: 900
@@ -27,5 +41,7 @@
         line-height: 2.8rem
         letter-spacing: 0%
         text-align: center
+
+
 
 
