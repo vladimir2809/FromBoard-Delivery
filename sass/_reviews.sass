@@ -1,0 +1,59 @@
+.reviews
+    grid-column: content-start / content-end
+    grid-row: 8 / 9
+    display: grid
+    grid-template-columns: 11rem 128rem 11rem
+    grid-template-rows: 7rem 35rem
+    justify-content: center
+    &__title
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+        justify-self: center
+        font-family: Formular
+        font-weight: 900
+        font-size: 3rem
+        line-height: 3.6rem
+        letter-spacing: 0%
+    &__content
+        width: 127.6rem
+        height: 35rem
+        display: flex
+        gap: 2.4rem
+.reviews-item
+    width: 62.6rem
+    background-color: white
+    padding: 4.3rem 3.2rem
+    border-radius: 1.6rem
+    &__text
+        height: 22.5rem
+        font-family: Formular
+        font-weight: 700
+        font-size: 2.4rem
+        line-height: 3.2rem
+        letter-spacing: 0%
+        margin-bottom: 3rem
+
+    &__author
+        width: 100%
+        display: flex
+        justify-content: space-between 
+    &__name
+        font-family: Formular
+        font-weight: 300
+        font-size: 2.4rem
+        line-height: 3.2rem
+        letter-spacing: 0%
+        color:  #6B728055
+    &__quotes
+        position: relative
+        top: -2.5rem
+.arrow-left
+    grid-column: 1 / 2
+    grid-row: 1 / -1
+    align-self: center
+    justify-self: center
+.arrow-right
+    grid-column: 3 / 4
+    grid-row: 1 / -1
+    align-self: center
+    justify-self: center
