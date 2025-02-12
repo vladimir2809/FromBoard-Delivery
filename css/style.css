@@ -36,8 +36,8 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 12.8rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 20rem 70rem 7rem minmax(40rem, -webkit-max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem;
-  grid-template-rows: 20rem 70rem 7rem minmax(40rem, max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem;
+  grid-template-rows: 20rem 70rem 7rem minmax(40rem, -webkit-max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem;
+  grid-template-rows: 20rem 70rem 7rem minmax(40rem, max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem;
 }
 
 .div-background {
@@ -491,4 +491,84 @@ html {
   grid-row: 1/-1;
   align-self: center;
   justify-self: center;
+}
+
+.questions {
+  grid-column: content-start/content-end;
+  grid-row: 10/11;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  padding: 6.4rem 0;
+}
+.questions__title {
+  margin-bottom: 3.2rem;
+  text-align: center;
+  font-family: Formular;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  letter-spacing: 0%;
+}
+
+.questions-form {
+  display: grid;
+  grid-template-columns: repeat(2, 23.7rem);
+  grid-template-rows: repeat(2, 5rem) 15rem 4.4rem;
+  grid-gap: 2.4rem;
+}
+.questions-form input, .questions-form textarea {
+  border: 3px solid black;
+  border-radius: 0.4rem;
+}
+.questions-form input::-webkit-input-placeholder, .questions-form textarea::-webkit-input-placeholder {
+  padding-left: 1.2rem;
+  padding-top: 1.2rem;
+}
+.questions-form input::-moz-placeholder, .questions-form textarea::-moz-placeholder {
+  padding-left: 1.2rem;
+  padding-top: 1.2rem;
+}
+.questions-form input:-ms-input-placeholder, .questions-form textarea:-ms-input-placeholder {
+  padding-left: 1.2rem;
+  padding-top: 1.2rem;
+}
+.questions-form input::-ms-input-placeholder, .questions-form textarea::-ms-input-placeholder {
+  padding-left: 1.2rem;
+  padding-top: 1.2rem;
+}
+.questions-form input::placeholder, .questions-form textarea::placeholder {
+  padding-left: 1.2rem;
+  padding-top: 1.2rem;
+}
+.questions-form input:focus, .questions-form textarea:focus {
+  outline: 2px solid #8B5CF6;
+  border: 3px solid #8B5CF6;
+}
+.questions-form__name {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.questions-form__email {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.questions-form__phone {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.questions-form__theme {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.questions-form__message {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+.questions-form__button {
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  width: 100%;
 }

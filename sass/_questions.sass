@@ -1,0 +1,49 @@
+.questions
+    grid-column: content-start / content-end
+    grid-row: 10 / 11
+    display: grid
+    justify-content: center
+    background-color: white
+    padding: 6.4rem 0
+    &__title
+        margin-bottom: 3.2rem
+        text-align: center
+        font-family: Formular
+        font-weight: 900
+        font-size: 3rem
+        line-height: 3.6rem
+        letter-spacing: 0%
+.questions-form
+    display: grid
+    grid-template-columns: repeat(2, 23.7rem)
+    grid-template-rows: repeat(2, 5rem) 15rem 4.4rem
+    grid-gap: 2.4rem    
+    & input, & textarea
+        border: 3px solid black
+        border-radius: .4rem
+        //width: 23.7rem
+    & input::placeholder, & textarea::placeholder
+        padding-left: 1.2rem
+        padding-top: 1.2rem
+    & input:focus, & textarea:focus
+        outline: 2px solid #8B5CF6
+        border: 3px solid #8B5CF6
+    &__name
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+    &__email
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+    &__phone
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+    &__theme
+        grid-column: 2 / 3
+        grid-row: 2 / 3
+    &__message
+        grid-column: 1 / -1
+        grid-row: 3 / 4
+    &__button
+        grid-column: 1 / -1
+        grid-row: 4 / 5
+        width: 100%
