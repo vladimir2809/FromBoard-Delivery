@@ -36,14 +36,21 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 12.8rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 20rem 70rem 7rem minmax(40rem, -webkit-max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem;
-  grid-template-rows: 20rem 70rem 7rem minmax(40rem, max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem;
+  grid-template-rows: 20rem 75rem 7rem minmax(40rem, -webkit-max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem 23.4rem;
+  grid-template-rows: 20rem 75rem 7rem minmax(40rem, max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem 23.4rem;
 }
 
 .div-background {
   grid-column: full-start/full-end;
   grid-row: 2/-1;
   background-color: #E5E7EB;
+  z-index: -1;
+}
+
+.div-background-2 {
+  grid-column: full-start/full-end;
+  grid-row: 12/-1;
+  background: #111827;
   z-index: -1;
 }
 
@@ -88,6 +95,7 @@ html {
 .nav {
   grid-column: 1/2;
   align-self: center;
+  width: 38.2rem;
 }
 .nav__list {
   list-style-type: none;
@@ -174,13 +182,13 @@ html {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 8rem 8.3rem 1fr;
+  grid-template-rows: 12rem 8.4rem 1fr;
 }
 .delivery__title-1 {
   grid-column: 1/2;
   grid-row: 1/2;
   font-family: Formular;
-  font-size: 3.8rem;
+  font-size: 3.9rem;
   font-weight: 900;
   line-height: 4rem;
   text-align: left;
@@ -571,4 +579,60 @@ html {
   grid-column: 1/-1;
   grid-row: 4/5;
   width: 100%;
+}
+
+.footer {
+  grid-column: content-start/content-end;
+  grid-row: 12/13;
+  display: grid;
+  grid-template-columns: 40rem 1fr 37.2rem 1fr 36rem;
+  grid-template-rows: 10rem 2.4rem 3rem;
+  padding: 4rem 0;
+}
+
+.footer-logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.footer-nav {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.footer-contact {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+
+.footer-offer {
+  grid-column: 1/5;
+  grid-row: 3/4;
+  color: #4B5563;
+}
+
+.footer-developed {
+  grid-column: 5/6;
+  grid-row: 3/4;
+  color: #4B5563;
+}
+
+.footer-logo__protection {
+  color: white;
+}
+
+.logo__text_white {
+  color: white;
+}
+
+.nav__link_white {
+  color: white;
+}
+
+.contact__phone-number_white {
+  color: white;
+}
+
+.contact__phone-label_white {
+  color: white;
 }
