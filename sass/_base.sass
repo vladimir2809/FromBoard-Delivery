@@ -1,15 +1,37 @@
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 510px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 690px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1536px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
 *, ::after, ::before
     margin: 0
     padding: 0
     box-sizing: border-box
 html
     font-size: 62.5%
+    // @include respond(tab-land)
+    //     font-size: 50%
     background-color: white
     font-family: Formular
 .container
     display: grid
     grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 12.8rem)) [content-end] 1fr [full-end]
-    grid-template-rows: 20rem 75rem 7rem minmax(40rem, max-content) 7.2rem 67.1rem 7.2rem 42rem 7.2rem 55.5rem 7.2rem 23.4rem
+    grid-template-rows: 13rem max-content  minmax(40rem, max-content) 67.1rem  42rem  55.5rem  23.4rem
+    grid-gap: 7.2rem 0
+    @include respond(tab-land)
+        grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 8.55rem)) [content-end] 1fr [full-end]
+        grid-template-rows: 13rem max-content  minmax(40rem, max-content) 107.1rem  41rem  55.5rem  23.4rem
 .div-background
     grid-column: full-start / full-end
     grid-row: 2 / -1
@@ -17,7 +39,7 @@ html
     z-index: -1
 .div-background-2
     grid-column: full-start / full-end
-    grid-row: 12 / -1
+    grid-row: 7 / -1
     background: #111827
     z-index: -1
 

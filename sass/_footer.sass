@@ -1,6 +1,6 @@
 .footer
     grid-column: content-start / content-end
-    grid-row: 12 / 13
+    grid-row: 7 / 8
     display: grid
     grid-template-columns: 40rem 1fr 37.2rem 1fr 36rem
     grid-template-rows: 10rem 2.4rem 3rem
@@ -22,6 +22,9 @@
 .footer-developed
     grid-column: 5 / 6 
     grid-row: 3 / 4
+    width: 24rem
+    text-align: right
+    justify-self: right
     color: #4B5563
 .footer-logo__protection
     color: white
@@ -29,7 +32,13 @@
     color: white
 .nav__link_white
     color: white 
-.contact__phone-number_white
+.contact__phone-number_foot
     color: white
-.contact__phone-label_white
+    @include respond(tab-land)
+        font-size: 3rem
+        text-align: right
+.contact__phone-label_foot
     color: white
+    @include respond(tab-land)
+        font-size: 2rem
+        text-align: right

@@ -1,16 +1,19 @@
 .calc
-    grid-column: 8 / content-end
-    grid-row: 2 / 3
+    grid-column: 2 / 3
+    grid-row: 1 / 2
     display: grid
     background-color: white
     //margin-top: 7.2rem
     //margin-bottom: 4rem
-    margin-left: 2.4rem
+    //margin-left: 2.4rem
     border-radius: 2rem
     justify-items: center 
     //justify-content: end
     //justify-self: center
     padding: 2.4rem 0
+    @include respond(tab-land)
+        grid-column: 1 / 2
+        grid-row: 2 / 3 
     &__title-2
         font-family: Formular
         font-size: 3rem
