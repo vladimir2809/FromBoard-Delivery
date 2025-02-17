@@ -1,27 +1,58 @@
 .header
     grid-column: content-start / content-end
     display: grid
-    grid-template-columns: 38.2rem 1fr 40rem 36rem 
+    grid-template-columns: 31.2rem 1fr 39rem 36rem 
     grid-template-rows: 7.5rem 4.4rem
     align-content: start
     grid-gap: 2.2rem 0
     padding: 2.4rem 0
     justify-content: space-around
-    //background-color: #88FF88
+    @include respond(tab-land)
+        grid-template-columns: 31.2rem 1fr 39rem 31rem 
+        grid-template-rows: 7.5rem 4.4rem
+    @include respond(tab-port)
+        grid-template-columns: 50% 50%
+        grid-template-rows: 7.5rem 6.5rem 4rem
+    &__nav-content
+        grid-column: 1 / -1
+        grid-row: 2 / 3
+        display: grid
+        grid-template-columns: 31.2rem 1fr 20rem
+        grid-template-rows: 100%
+        @include respond(tab-port)
+            padding: 2.2rem 0
+            border-top: 2px solid #A78BFA
+            border-bottom: 2px solid #A78BFA
     &__btn
-        grid-column: 4 / 5
+        grid-column: 3 / 4
+        grid-row: 1 / 2
         justify-self: end
+        @include respond(tab-port)
+            grid-column: 3 / 4
+            grid-row: 1 / 2
+            align-self: center
 .logo
     grid-column: 1 / 2
     grid-row: 1 / 2
 .info
     grid-column: 3 / 4
+    grid-row: 1 / 2 
     justify-self: right
     padding-right: 1.2rem
     //width: 34.9rem
-    &__text
-        padding-right: 1.2rem
-        border-right: 1px solid #A78BFA
+    @include respond(tab-port)
+        grid-column: 1 / 3
+        grid-row: 3 / 4
+        display: flex
+        height: 100%
+        justify-self: center
+        align-items: center
+        // &__text
+    //     padding-right: 1.2rem
+    //     border-right: 1px solid #A78BFA
+    //     // @include respond(tab-port)
+    //     //     display: grid
+    //     //     justify-items: center
     &__text-paragraph
         //styleName: base/regular;
         font-family: Formular
@@ -30,11 +61,32 @@
         line-height: 2.4rem
         text-align: right
         color: #111827
+        &:not(:last-child)
+            @include respond(tab-port)    
+                margin-right: 1.4rem
+        @include respond(tab-port)
+            //display: flex
+            width: 22.3rem
+            //height: 100%
+            font-size: 1.4rem
+            text-align: center
+            align-self: center
+            font-weight: 400
+            line-height: 2.0rem
+            color: #111827
+
+            //justify-content: center
+            
 .phone
-    padding-left: 1.2rem
     grid-column: 4 / 5
     grid-row: 1 / 2
+    padding-left: 1.2rem
     border-left: 1px solid #A78BFA
+    @include respond(tab-port)
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        justify-self: end
+        border-left: none
     &__number
         //styleName: 4xl/black;
         font-family: Formular
@@ -43,6 +95,9 @@
         line-height: 4.0rem
         text-align: left
         color: #111827
+        @include respond(tab-land)
+            font-size: 3.1rem
+            line-height: 3.6rem
     &__label
         //styleName: 2xl/light;
         font-family: Formular
@@ -50,4 +105,7 @@
         font-weight: 300
         line-height: 3.2rem
         text-align: left
+        @include respond(tab-land)
+            font-size: 2rem
+            line-height: 2.8rem
 

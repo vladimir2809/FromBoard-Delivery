@@ -4,7 +4,7 @@
             @content
 
     @if $breakpoint == tab-port
-        @media only screen and (max-width: 690px)
+        @media only screen and (max-width: 1024px)
             @content
 
     @if $breakpoint == tab-land
@@ -32,6 +32,9 @@ html
     @include respond(tab-land)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 8.55rem)) [content-end] 1fr [full-end]
         grid-template-rows: 13rem max-content  minmax(40rem, max-content) 107.1rem  41rem  55.5rem  23.4rem
+    @include respond(tab-port)
+        grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 6.4rem)) [content-end] 1fr [full-end]
+        grid-template-rows: 20rem max-content  minmax(40rem, max-content) 107.1rem  41rem  55.5rem  23.4rem
 .div-background
     grid-column: full-start / full-end
     grid-row: 2 / -1
