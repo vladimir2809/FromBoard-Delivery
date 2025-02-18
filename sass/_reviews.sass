@@ -5,6 +5,12 @@
     grid-template-columns: 11rem 128rem 11rem
     grid-template-rows: 7rem 35rem
     justify-content: center
+    @include respond(tab-land)
+        grid-template-columns: 8rem 85rem 8rem
+        grid-template-rows: 7rem 35rem
+    @include respond(tab-port)
+        grid-template-columns: 11rem 57rem 11rem
+        grid-template-rows: 7rem 22.4rem
     &__title
         grid-column: 1 / -1
         grid-row: 1 / 2
@@ -15,15 +21,35 @@
         line-height: 3.6rem
         letter-spacing: 0%
     &__content
+        grid-column: 2 / 3
+        grid-row: 2 / 3
         width: 127.6rem
         height: 35rem
         display: flex
         gap: 2.4rem
+        overflow: hidden
+        @include respond(tab-land)
+            width: 100rem
+            height: 35rem
+            //justify-content: center
+            flex-wrap: wrap
+        @include respond(tab-port)
+            width: 57rem
+            height: 22.4rem
+            justify-content: center
+            flex-wrap: wrap
 .reviews-item
     width: 62.6rem
     background-color: white
     padding: 4.3rem 3.2rem
     border-radius: 1.6rem
+    @include respond(tab-land)
+        width: 39.6rem
+        height: 31.5rem
+        padding: 1.6rem
+    @include respond(tab-port)
+        width: 57rem
+        height: 22.4rem
     &__text
         height: 22.5rem
         font-family: Formular
@@ -32,21 +58,36 @@
         line-height: 3.2rem
         letter-spacing: 0%
         margin-bottom: 3rem
-
+        @include respond(tab-land)
+            height: 19.6rem
+            font-weight: 700
+            font-size: 1.8rem
+            line-height: 2.8rem
+            margin-bottom: 1.2em
     &__author
         width: 100%
         display: flex
         justify-content: space-between 
     &__name
+        position: relative
+        bottom: 2.5rem
         font-family: Formular
         font-weight: 300
         font-size: 2.4rem
         line-height: 3.2rem
         letter-spacing: 0%
         color:  #6B728055
+        @include respond(tab-land)
+            bottom: -3rem
+        @include respond(tab-port)
+            bottom: 6rem
     &__quotes
         position: relative
-        top: -2.5rem
+        bottom: 2.5rem
+        @include respond(tab-land)
+            bottom: -2.5rem
+        @include respond(tab-port)
+            bottom: 6rem
 .arrow-left
     grid-column: 1 / 2
     grid-row: 1 / -1

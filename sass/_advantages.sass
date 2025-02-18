@@ -2,7 +2,7 @@
     grid-column: content-start / content-end
     grid-row: 3 / 4
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr))
     grid-template-rows: minmax(repeat(auto-fit, 15rem),max-content)
     justify-items: center
     grid-gap: 2.4rem
@@ -21,9 +21,14 @@
     grid-template-columns: 14rem 30rem
     grid-template-rows: minmax(max-content, 14rem)
     align-items: center
+    @include respond(tab-port)
+        grid-template-columns: 10rem 26rem
     &__img
         grid-column: 1 / 2
         grid-row: 1 / 2
+        @include respond(tab-port)
+            width: 9.6rem
+            height: 9.6rem
     &__text
         grid-column: 2 / 3
     &__title-4
