@@ -5,20 +5,46 @@
     grid-template-columns: 40rem 1fr 37.2rem 1fr 36rem
     grid-template-rows: 10rem 2.4rem 3rem
     padding: 4rem 0
+    @include respond(tab-land)
+        grid-column: full-start / full-end
+        grid-template-columns: 33rem 1fr 37.8rem 1fr 30rem
+        padding: 4rem 5rem
+    @include respond(tab-port)
+        grid-template-columns: 50% 50%
+        grid-template-rows: 3rem 12rem 5rem 4rem   
 .footer-logo
     grid-column: 1 / 2
     grid-row: 1 / 2 
+    @include respond(tab-port)
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        align-self: center
+        justify-self: left
 .footer-nav
     grid-column: 3 / 4
     grid-row: 1 / 2
+    @include respond(tab-port)
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+        justify-self: center
 .footer-contact
     grid-column: 5 / 6
     grid-row: 1 / 2
+    @include respond(tab-port)
+        grid-column: 2 / 3
+        grid-row: 2 / 3
+        align-self: center
+        justify-self: end
 .footer-offer
     grid-column: 1 / 5
     grid-row: 3 / 4
     color: #4B5563
-
+    @include respond(tab-port)
+        grid-column: 1 / -1
+        grid-row: 3 / 4
+        align-self: center
+        justify-self: center
+        text-align: center
 .footer-developed
     grid-column: 5 / 6 
     grid-row: 3 / 4
@@ -26,6 +52,13 @@
     text-align: right
     justify-self: right
     color: #4B5563
+    @include respond(tab-port)
+        grid-column: 1 / -1
+        grid-row: 4 / 5
+        width: 100%
+        align-self: center
+        justify-self: center
+        text-align: center
 .footer-logo__protection
     color: white
 .logo__text_white

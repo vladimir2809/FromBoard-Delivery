@@ -81,12 +81,14 @@
     grid-column: 4 / 5
     grid-row: 1 / 2
     padding-left: 1.2rem
-    border-left: 1px solid #A78BFA
+    justify-self: end
     @include respond(tab-port)
         grid-column: 2 / 3
         grid-row: 1 / 2
         justify-self: end
         border-left: none
+    &_border
+        border-left: 1px solid #A78BFA
     &__number
         //styleName: 4xl/black;
         font-family: Formular

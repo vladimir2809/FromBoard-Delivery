@@ -30,11 +30,11 @@ html
     grid-template-rows: 13rem max-content  minmax(40rem, max-content) 67.1rem  42rem  55.5rem  23.4rem
     grid-gap: 7.2rem 0
     @include respond(tab-land)
-        grid-template-columns: [full-start] 1fr [content-start] repeat(12,  8.55rem) [content-end] 1fr [full-end]
+        grid-template-columns: [full-start] 1fr [content-start] repeat(12,  minmax(6%, 8.55rem)) [content-end] 1fr [full-end]
         grid-template-rows: 13rem max-content  minmax(40rem, max-content) 107.1rem  41rem  55.5rem  23.4rem
     @include respond(tab-port)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  6.4rem) [content-end] 1fr [full-end]
-        grid-template-rows: 20rem max-content  minmax(40rem, max-content) 107.1rem  30rem  55.5rem  23.4rem
+        grid-template-rows: 20rem max-content  minmax(40rem, max-content) 107.1rem  30rem  55.5rem  34rem
 .div-background
     grid-column: full-start / full-end
     grid-row: 2 / -1
