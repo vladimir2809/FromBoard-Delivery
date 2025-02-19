@@ -1,6 +1,6 @@
 @mixin respond($breakpoint)
     @if $breakpoint == phone
-        @media only screen and (max-width: 510px)
+        @media only screen and (max-width: 758px)
             @content
 
     @if $breakpoint == tab-port
@@ -35,6 +35,10 @@ html
     @include respond(tab-port)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  6.4rem) [content-end] 1fr [full-end]
         grid-template-rows: 20rem max-content  minmax(40rem, max-content) 107.1rem  30rem  55.5rem  34rem
+    @include respond(phone)
+        grid-template-columns: [full-start] 1fr [content-start] repeat(12,  5.25rem) [content-end] 1fr [full-end]
+        grid-template-rows: 7.5rem 120rem  minmax(40rem, max-content) 203.1rem  38rem  55.5rem  44rem
+        grid-gap: 4rem 0
 .div-background
     grid-column: full-start / full-end
     grid-row: 2 / -1

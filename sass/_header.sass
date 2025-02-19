@@ -13,6 +13,9 @@
     @include respond(tab-port)
         grid-template-columns: 50% 50%
         grid-template-rows: 7.5rem 6.5rem 4rem
+    @include respond(phone)
+        grid-template-columns: 50% 50%
+        grid-template-rows: 7.5rem 
     &__nav-content
         grid-column: 1 / -1
         grid-row: 2 / 3
@@ -23,6 +26,8 @@
             padding: 2.2rem 0
             border-top: 2px solid #A78BFA
             border-bottom: 2px solid #A78BFA
+        @include respond(phone)
+            display: none
     &__btn
         grid-column: 3 / 4
         grid-row: 1 / 2
@@ -47,12 +52,8 @@
         height: 100%
         justify-self: center
         align-items: center
-        // &__text
-    //     padding-right: 1.2rem
-    //     border-right: 1px solid #A78BFA
-    //     // @include respond(tab-port)
-    //     //     display: grid
-    //     //     justify-items: center
+    @include respond(phone)
+        display: none
     &__text-paragraph
         //styleName: base/regular;
         font-family: Formular
@@ -87,8 +88,11 @@
         grid-row: 1 / 2
         justify-self: end
         border-left: none
+    @include respond(phone)
+            display: none
     &_border
         border-left: 1px solid #A78BFA
+
     &__number
         //styleName: 4xl/black;
         font-family: Formular
@@ -110,4 +114,18 @@
         @include respond(tab-land)
             font-size: 2rem
             line-height: 2.8rem
+.small-contact
+    display: none
+    @include respond(phone)
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        display: flex
+        height: 2rem
+        align-self: center
+        justify-self: end
+    &__phone
+        margin-right: 1.6rem
+    &__hamburger
+        position: relative
+        top: .3rem
 

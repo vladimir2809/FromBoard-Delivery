@@ -6,11 +6,14 @@
     grid-template-rows: 7rem 35rem
     justify-content: center
     @include respond(tab-land)
-        grid-template-columns: 8rem 85rem 8rem
+        grid-template-columns: 10rem 81.5rem 10rem
         grid-template-rows: 7rem 35rem
     @include respond(tab-port)
         grid-template-columns: 11rem 54.8rem 11rem
         grid-template-rows: 7rem 22.4rem
+    @include respond(phone)
+        grid-template-columns: 10rem 44rem 10rem
+        grid-template-rows: 7rem 28rem
     &__title
         grid-column: 1 / -1
         grid-row: 1 / 2
@@ -39,6 +42,12 @@
             height: 22.4rem
             justify-content: center
             flex-wrap: wrap
+        @include respond(phone)
+            //width: 57rem
+            width: 100%
+            height: 100%
+            justify-content: center
+            flex-wrap: wrap
 .reviews-item
     width: 62.6rem
     background-color: white
@@ -52,6 +61,11 @@
         //width: 57rem
         width: 100%
         height: 22.4rem
+    @include respond(phone)
+        //width: 57rem
+        width: 100%
+        height: 28rem
+        padding: 3.2rem 1.6rem
     &__text
         height: 22.5rem
         font-family: Formular
@@ -83,6 +97,8 @@
             bottom: -3rem
         @include respond(tab-port)
             bottom: 6rem
+        @include respond(phone)
+            bottom: 5rem
     &__quotes
         position: relative
         bottom: 2.5rem

@@ -12,6 +12,9 @@
     @include respond(tab-port)
         grid-template-columns: 50% 50%
         grid-template-rows: 3rem 12rem 5rem 4rem   
+    @include respond(phone)
+        grid-template-columns: 100%
+        grid-template-rows: 5rem 8rem 8rem 9rem 3rem 
 .footer-logo
     grid-column: 1 / 2
     grid-row: 1 / 2 
@@ -20,6 +23,10 @@
         grid-row: 2 / 3
         align-self: center
         justify-self: left
+    @include respond(phone)
+        grid-column: 1 / 2
+        grid-row: 3 / 4
+        justify-self: center
 .footer-nav
     grid-column: 3 / 4
     grid-row: 1 / 2
@@ -27,6 +34,12 @@
         grid-column: 1 / -1
         grid-row: 1 / 2
         justify-self: center
+    @include respond(phone)
+        display: block
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        justify-self: center
+        align-self: start
 .footer-contact
     grid-column: 5 / 6
     grid-row: 1 / 2
@@ -35,6 +48,11 @@
         grid-row: 2 / 3
         align-self: center
         justify-self: end
+    @include respond(phone)
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        justify-self: center
+        display: block
 .footer-offer
     grid-column: 1 / 5
     grid-row: 3 / 4
@@ -45,6 +63,11 @@
         align-self: center
         justify-self: center
         text-align: center
+    @include respond(phone)
+        grid-column: 1 / 2
+        grid-row: 4 / 5
+        justify-self: center  
+        width: 50.2rem      
 .footer-developed
     grid-column: 5 / 6 
     grid-row: 3 / 4
@@ -59,8 +82,15 @@
         align-self: center
         justify-self: center
         text-align: center
+    @include respond(phone)
+        grid-column: 1 / 2
+        grid-row: 5 / 6
+        justify-self: center
 .footer-logo__protection
     color: white
+.logo_center
+    @include respond(phone)
+        justify-content: center
 .logo__text_white
     color: white
 .nav__link_white
