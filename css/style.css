@@ -631,7 +631,7 @@ html {
 }
 @media only screen and (max-width: 1536px) {
   .guarantees-container {
-    grid-template-columns: repeat(2, 40rem);
+    grid-template-columns: repeat(2, 37rem);
     grid-template-rows: 41rem 41rem;
     grid-gap: 2.4rem 2.4rem;
   }
@@ -668,7 +668,7 @@ html {
 }
 @media only screen and (max-width: 1024px) {
   .reviews {
-    grid-template-columns: 11rem 57rem 11rem;
+    grid-template-columns: 11rem 54.8rem 11rem;
     grid-template-rows: 7rem 22.4rem;
   }
 }
@@ -703,7 +703,7 @@ html {
 }
 @media only screen and (max-width: 1024px) {
   .reviews__content {
-    width: 57rem;
+    width: 100%;
     height: 22.4rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -728,7 +728,7 @@ html {
 }
 @media only screen and (max-width: 1024px) {
   .reviews-item {
-    width: 57rem;
+    width: 100%;
     height: 22.4rem;
   }
 }
