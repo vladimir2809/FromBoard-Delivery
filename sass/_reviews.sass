@@ -94,7 +94,7 @@
         justify-content: space-between 
     &__name
         position: relative
-        bottom: 2.5rem
+        bottom: 0rem
         font-family: Formular
         font-weight: 300
         font-size: 2.4rem
@@ -106,14 +106,16 @@
         @include respond(tab-port)
             bottom: 6rem
         @include respond(phone)
-            bottom: 2.5rem
+            bottom: 1.7rem
     &__quotes
         position: relative
-        bottom: 2.5rem
+        bottom: 0rem
         @include respond(tab-land)
-            bottom: -2.5rem
+            bottom: -2.0rem
         @include respond(tab-port)
-            bottom: 3.5rem
+            bottom: 6.5rem
+        @include respond(phone)
+            bottom: 2.5rem
 .arrow-left
     grid-column: 1 / 2
     grid-row: 1 / -1

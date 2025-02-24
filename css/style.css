@@ -886,7 +886,7 @@ html {
 }
 .reviews-item__name {
   position: relative;
-  bottom: 2.5rem;
+  bottom: 0rem;
   font-family: Formular;
   font-weight: 300;
   font-size: 2.4rem;
@@ -906,21 +906,26 @@ html {
 }
 @media only screen and (max-width: 758px) {
   .reviews-item__name {
-    bottom: 2.5rem;
+    bottom: 1.7rem;
   }
 }
 .reviews-item__quotes {
   position: relative;
-  bottom: 2.5rem;
+  bottom: 0rem;
 }
 @media only screen and (max-width: 1536px) {
   .reviews-item__quotes {
-    bottom: -2.5rem;
+    bottom: -2rem;
   }
 }
 @media only screen and (max-width: 1024px) {
   .reviews-item__quotes {
-    bottom: 3.5rem;
+    bottom: 6.5rem;
+  }
+}
+@media only screen and (max-width: 758px) {
+  .reviews-item__quotes {
+    bottom: 2.5rem;
   }
 }
 
