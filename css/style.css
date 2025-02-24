@@ -765,7 +765,7 @@ html {
 }
 @media only screen and (max-width: 758px) {
   .reviews {
-    grid-template-columns: 10rem 44rem 10rem;
+    grid-template-columns: 10rem 45rem 10rem;
     grid-template-rows: 7rem 28rem;
   }
 }
@@ -784,15 +784,12 @@ html {
   grid-row: 2/3;
   width: 127.6rem;
   height: 35rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 2.4rem;
   overflow: hidden;
 }
 @media only screen and (max-width: 1536px) {
   .reviews__content {
-    width: 100rem;
+    width: 100%;
     height: 35rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -820,6 +817,18 @@ html {
         flex-wrap: wrap;
   }
 }
+.reviews__container-for-items {
+  width: 40000rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
 
 .reviews-item {
   width: 62.6rem;
@@ -836,19 +845,20 @@ html {
 }
 @media only screen and (max-width: 1024px) {
   .reviews-item {
-    width: 100%;
+    width: 54.8rem;
     height: 22.4rem;
   }
 }
 @media only screen and (max-width: 758px) {
   .reviews-item {
-    width: 100%;
+    width: 45rem;
     height: 28rem;
     padding: 3.2rem 1.6rem;
   }
 }
 .reviews-item__text {
   height: 22.5rem;
+  width: 100%;
   font-family: Formular;
   font-weight: 700;
   font-size: 2.4rem;
@@ -896,7 +906,7 @@ html {
 }
 @media only screen and (max-width: 758px) {
   .reviews-item__name {
-    bottom: 5rem;
+    bottom: 2.5rem;
   }
 }
 .reviews-item__quotes {
@@ -910,7 +920,7 @@ html {
 }
 @media only screen and (max-width: 1024px) {
   .reviews-item__quotes {
-    bottom: 6rem;
+    bottom: 3.5rem;
   }
 }
 
@@ -919,6 +929,7 @@ html {
   grid-row: 1/-1;
   align-self: center;
   justify-self: center;
+  z-index: 10;
 }
 
 .arrow-right {
@@ -926,6 +937,7 @@ html {
   grid-row: 1/-1;
   align-self: center;
   justify-self: center;
+  z-index: 10;
 }
 
 .questions {
