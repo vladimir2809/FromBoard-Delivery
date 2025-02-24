@@ -12,6 +12,7 @@ window.addEventListener('resize',(e) => {
        
     //let width=document.getElementsByClassName('reviews-item')[0].offsetWidth;
     x=0;
+    countStep=0;
     flagMove=false;
     clearInterval(interval);
     console.log('resize')
