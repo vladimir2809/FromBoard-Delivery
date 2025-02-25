@@ -1,5 +1,6 @@
 var x=0;
 let gap=20
+var width=0;
 var flagMove=false
 var countStep=0;
 var maxCountStep=0;
@@ -8,14 +9,18 @@ var elemArr=[];
 var elemChilds=[];
 var perent;
 var interval;
+var openNav=false;
+let hamburgerIcon
 window.addEventListener('resize',(e) => {
        
-    //let width=document.getElementsByClassName('reviews-item')[0].offsetWidth;
+    width=window.innerWidth
     x=0;
     countStep=0;
     flagMove=false;
+    //openNav=false;
+    changeNavDisplay();
     clearInterval(interval);
-    console.log('resize')
+    console.log('resize','width='+width)
     document.getElementsByClassName('reviews__container-for-items')[0].style.transform=`translateX(${x}px)`;
 });
 window.addEventListener("load",()=>{
@@ -46,7 +51,11 @@ window.addEventListener("load",()=>{
         let obj=elemArrFirst[i].cloneNode(true)
         elemArr.push(obj)
     }
-
+    hamburgerIcon=document.getElementsByClassName("small-contact__hamburger")[0];
+    hamburgerIcon.addEventListener("click",(e)=>{
+        openNav=!openNav;
+        changeNavDisplay();
+    });
 
 });
 function moveLeft()
@@ -119,7 +128,52 @@ function insertElemInEnd()
     console.log(countStep);
     console.log('InsertEnd');
 }
-// function calibrationX()
-// {
+function changeNavDisplay()
+{
 
-// }
+    if (openNav==true || width>758)
+    {
+        hamburgerIcon.setAttribute("src", "img/close.svg");
+        document.getElementsByClassName("header__nav-content")[0].style.display='grid';
+        //document.getElementsByClassName("header__nav-content")[0].style.position='fixed';
+        //document.getElementsByClassName("header__nav-content")[0].style.top='11.4rem';
+        // document.getElementsByClassName("header__nav-content")[0].style.background='white';
+        document.getElementsByClassName("nav")[0].style.display='block';
+        if (width>1024)
+        {
+            document.getElementsByClassName("info")[0].style.display='block';
+
+        }
+        else
+        {
+
+            document.getElementsByClassName("info")[0].style.display='flex';
+        }
+        document.getElementsByClassName("div-background-3")[0].style.display='block';
+        document.getElementsByClassName("div-background-transparent")[0].style.display='block';
+        // document.getElementsByClassName("info")[0].style.background='white';
+    }
+    else
+    {
+        hamburgerIcon.setAttribute("src", "img/hamburger.svg");
+        
+        document.getElementsByClassName("header__nav-content")[0].style.display='none';
+        //document.getElementsByClassName("header__nav-content")[0].style.position='fixed';
+        //document.getElementsByClassName("header__nav-content")[0].style.top='11.4rem';
+        // document.getElementsByClassName("header__nav-content")[0].style.background='white';
+        document.getElementsByClassName("nav")[0].style.display='none';
+        document.getElementsByClassName("info")[0].style.display='none';
+        document.getElementsByClassName("div-background-3")[0].style.display='none';
+        document.getElementsByClassName("div-background-transparent")[0].style.display='none';
+        // document.getElementsByClassName("info")[0].style.background='white';
+    }
+    // if (width>758)
+    // {
+    //     document.getElementsByClassName("info")[0].style.display='block';
+
+    // }
+}
+        // function calibrationX()
+        // {
+            
+            // }

@@ -33,7 +33,7 @@ html
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  minmax(6%, 8.55rem)) [content-end] 1fr [full-end]
         grid-template-rows: 13rem max-content  minmax(40rem, max-content) 107.1rem  41rem  55.5rem  23.4rem
     @include respond(tab-port)
-        grid-template-columns: [full-start] 1fr [content-start] repeat(12,  6.4rem) [content-end] 1fr [full-end]
+        grid-template-columns: [full-start] 1fr [content-start] repeat(12,  6.0rem) [content-end] 1fr [full-end]
         grid-template-rows: 20rem max-content  minmax(40rem, max-content) 107.1rem  30rem  55.5rem  34rem
     @include respond(phone)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  5.25rem) [content-end] 1fr [full-end]
@@ -49,4 +49,26 @@ html
     grid-row: 7 / -1
     background: #111827
     z-index: -1
+.div-background-3
+    @include respond(phone)
+        display: none
+        position: absolute//fixed
+        top: 11.5rem
+        left: 0
+        width: 100rem
+        height: 13.5rem
+        background: white
+        z-index: 2
+.div-background-transparent
+    @include respond(phone)
+        // position: fixed
+        display: none
+        grid-column: full-start / full-end
+        grid-row: 2 / -1
+        top: 11.5rem
+        left: 0
+        width: 100%
+        height: 100hv
+        background: #00000088
+        z-index: 2
 
