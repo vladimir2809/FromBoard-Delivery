@@ -24,20 +24,27 @@ html
     //     font-size: 50%
     background-color: white
     font-family: Formular
+    @include respond(phone)
+        //font-size: 45%
+        // @include respond(tab-land)
+        //     font-size: 50%
+        background-color: white
+        font-family: Formular
 .container
     display: grid
     grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(6.5%, 12.8rem)) [content-end] 1fr [full-end]
     grid-template-rows: 13rem max-content  minmax(40rem, max-content) 67.1rem  42rem  55.5rem  23.4rem
     grid-gap: 7.2rem 0
+    margin: 0 auto
     @include respond(tab-land)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  minmax(6%, 8.55rem)) [content-end] 1fr [full-end]
         grid-template-rows: 13rem max-content  minmax(40rem, max-content) 107.1rem  41rem  55.5rem  23.4rem
     @include respond(tab-port)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  6.0rem) [content-end] 1fr [full-end]
-        grid-template-rows: 20rem max-content  minmax(40rem, max-content) 107.1rem  30rem  55.5rem  34rem
+        grid-template-rows: 20rem 130rem  minmax(40rem, max-content) 107.1rem  30rem  55.5rem  34rem
     @include respond(phone)
         grid-template-columns: [full-start] 1fr [content-start] repeat(12,  5.25rem) [content-end] 1fr [full-end]
-        grid-template-rows: 7.5rem 120rem  minmax(40rem, max-content) 203.1rem  38rem  55.5rem  44rem
+        grid-template-rows: 7.5rem 130rem  minmax(40rem, max-content) 203.1rem  38rem  55.5rem  44rem
         grid-gap: 4rem 0
 .div-background
     grid-column: full-start / full-end
